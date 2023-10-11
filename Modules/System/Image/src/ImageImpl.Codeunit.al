@@ -57,7 +57,7 @@ codeunit 3970 "Image Impl."
         Graphics := Graphics.FromImage(Image);
 
         Color := Color.FromArgb(Alpha, Red, Green, Blue);
-        Graphics.Clear(Color);
+        // Graphics.Clear(Color);
         Graphics.Dispose();
 
         EncodeToImage(Image);
@@ -98,7 +98,7 @@ codeunit 3970 "Image Impl."
         Graphics.InterpolationMode := Graphics.InterpolationMode::HighQualityBicubic;
         Graphics.PixelOffsetMode := Graphics.PixelOffsetMode::HighQuality;
 
-        Graphics.DrawImage(Image, DstRectangle, SrcRectangle, GraphicsUnit::Pixel);
+        // Graphics.DrawImage(Image, DstRectangle, SrcRectangle, GraphicsUnit::Pixel);
         Graphics.Dispose();
 
         EncodeToImage(BitmapDst);
@@ -129,7 +129,7 @@ codeunit 3970 "Image Impl."
         Graphics.SmoothingMode := Graphics.SmoothingMode::AntiAlias;
         Graphics.InterpolationMode := Graphics.InterpolationMode::HighQualityBicubic;
         Graphics.PixelOffsetMode := Graphics.PixelOffsetMode::HighQuality;
-        Graphics.DrawImage(Image, Rectangle);
+        // Graphics.DrawImage(Image, Rectangle);
         Graphics.Dispose();
 
         EncodeToImage(BitmapDst);

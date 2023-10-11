@@ -85,10 +85,10 @@ codeunit 9029 "Azure AD User Sync Impl."
         if IsNull(GraphUserInfoPage) then
             exit;
 
-        repeat
-            foreach GraphUserInfo in GraphUserInfoPage.CurrentPage() do
-                GetUpdatesFromGraphUserInfo(GraphUserInfo, AzureADUserUpdate, OfficeUsersInBC);
-        until (not GraphUserInfoPage.GetNextLicensedUsersPage(AssignedPlansList));
+        // repeat
+        //     foreach GraphUserInfo in GraphUserInfoPage.CurrentPage() do
+        //         GetUpdatesFromGraphUserInfo(GraphUserInfo, AzureADUserUpdate, OfficeUsersInBC);
+        // until (not GraphUserInfoPage.GetNextLicensedUsersPage(AssignedPlansList));
     end;
 
     [NonDebuggable]

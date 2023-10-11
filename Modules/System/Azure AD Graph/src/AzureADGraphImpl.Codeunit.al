@@ -61,8 +61,8 @@ codeunit 9014 "Azure AD Graph Impl."
         if IsNull(UserInfo) then
             exit;
 
-        if CanQueryGraph() then
-            UserAssignedPlans := GraphQuery.GetUserAssignedPlans(UserInfo);
+        // if CanQueryGraph() then
+        //     UserAssignedPlans := GraphQuery.GetUserAssignedPlans(UserInfo);
     end;
 
     [NonDebuggable]
@@ -78,15 +78,15 @@ codeunit 9014 "Azure AD Graph Impl."
     [NonDebuggable]
     procedure GetDirectorySubscribedSkus(var DirectorySubscribedSkus: DotNet GenericIEnumerable1)
     begin
-        if CanQueryGraph() then
-            DirectorySubscribedSkus := GraphQuery.GetDirectorySubscribedSkus();
+        // if CanQueryGraph() then
+        //     DirectorySubscribedSkus := GraphQuery.GetDirectorySubscribedSkus();
     end;
 
     [NonDebuggable]
     procedure GetDirectoryRoles(var DirectoryRoles: DotNet GenericIEnumerable1)
     begin
-        if CanQueryGraph() then
-            DirectoryRoles := GraphQuery.GetDirectoryRoles();
+        // if CanQueryGraph() then
+        //     DirectoryRoles := GraphQuery.GetDirectoryRoles();
     end;
 
     [NonDebuggable]
@@ -121,8 +121,8 @@ codeunit 9014 "Azure AD Graph Impl."
     [NonDebuggable]
     procedure GetLicensedUsersPage(AssignedPlans: DotNet StringArray; NumberOfUsers: Integer; var UserInfoPage: DotNet UserInfoPage)
     begin
-        if CanQueryGraph() then
-            UserInfoPage := GraphQuery.GetLicensedUsersPage(AssignedPlans, NumberOfUsers);
+        // if CanQueryGraph() then
+        //     UserInfoPage := GraphQuery.GetLicensedUsersPage(AssignedPlans, NumberOfUsers);
     end;
 
     [NonDebuggable]
@@ -153,8 +153,8 @@ codeunit 9014 "Azure AD Graph Impl."
     [TryFunction]
     local procedure TryGetGroupMembers(GroupDisplayName: Text; var GroupMembers: DotNet IEnumerable)
     begin
-        if CanQueryGraph() then
-            GroupMembers := GraphQuery.GetGroupMembers(GroupDisplayName);
+        // if CanQueryGraph() then
+        //     GroupMembers := GraphQuery.GetGroupMembers(GroupDisplayName);
     end;
 
     [NonDebuggable]
